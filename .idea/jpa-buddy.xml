@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig" ddlActionDbType="postgres" migrateIndexesAndConstraints="true">
+    <option name="defaultUnitInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="a589a5d8-6de4-41e0-b67a-fe559ed92784" />
+    <option name="reLastEntityCreationPackage" value="src/main/java/javaBeans" />
+    <option name="newEntityIdStrategy" />
+  </component>
+</project>

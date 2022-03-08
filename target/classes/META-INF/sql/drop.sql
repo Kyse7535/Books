@@ -1,0 +1,11 @@
+drop table if exists author cascade ;
+drop table if exists editor cascade ;
+drop table if exists category cascade ;
+drop table if exists library cascade ;
+drop table if exists catalog cascade ;
+drop table if exists bookshelf cascade ;
+drop table if exists book cascade ;
+drop table if exists book_copy cascade ;
+drop table if exists book_author cascade ;
+drop table if exists member cascade ;
+drop table if exists book_basket cascade ;
