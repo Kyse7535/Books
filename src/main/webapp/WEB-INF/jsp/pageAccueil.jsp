@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="template/header.jsp"%>
-<div class="part1">
+<div class="part1" background="../css/books.jpg">
 
 </div>
 <h2 class="subTitle">List of Books</h2>
@@ -18,6 +18,17 @@
     <s:iterator value="bookAuthors">
         <s:set var="book" value="isbn" />
         <s:set var="author" value="author" />
+        <s:url action="authorDetail" var="urlAuthorDetail">
+            <s:param name="author_id"><s:property value="#author.id" /> </s:param>
+        </s:url>
+
+        <s:url action="addToBasket" var="addToBasketUrl">
+            <s:param name="isbn"><s:property value="#book.id" /> </s:param>
+        </s:url>
+
+        <s:url action="bookDetail" var="bookDetailUrl">
+            <s:param name="isbn"><s:property value="#book.id" /> </s:param>
+        </s:url>
     <div class="bookAuthor" >
         <figure>
             <img src="<s:property value="#book.imagePath" /> ">
@@ -29,9 +40,11 @@
             </figcaption>
         </figure>
         <div>
-            <h3><s:a action="livre" class="book"><s:property value="#book.bookTitle" /> </s:a> </h3>
-            <span>By <s:property value="#author.authorFirstname" /> <s:property value="#author.authorLastname" /> </span>
+            <h3><a href="<s:property value="#bookDetailUrl" /> " class="book"><s:property value="#book.bookTitle" /> </a> </h3>
+            <span>By <a href="<s:property value="#urlAuthorDetail" /> "><s:property value="#author.authorFirstname" />
+                <s:property value="#author.authorLastname" /></a> </span>
             <p><s:property value="#book.bookPrice" /> €</p>
+            <a href="<s:property value="#addToBasketUrl" /> " class="btn-basket"><i class="bi bi-basket2"></i> Add to Basket</a>
         </div>
     </div>
     </s:iterator>

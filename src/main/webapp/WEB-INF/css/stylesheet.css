@@ -9,10 +9,9 @@ html, body{
     padding:0;
     height:100%;
     box-sizing: border-box;
+    min-width: 300px;
 }
-#header_mobile {
-    display: block;
-}
+
 #bloc_page {
     display: none;
     height: 0;
@@ -141,7 +140,7 @@ footer {
 
 .part1 {
     height: 500px;
-    background: url("/WEB-INF/images/books.jpg") red center no-repeat;
+    background: url("https://picsum.photos/1280/700") center no-repeat;
     background-size: cover;
 }
 
@@ -159,7 +158,6 @@ footer {
     #bloc_page {
         display: block;
         height: auto;
-
     }
 
     #bloc_page ul {
@@ -178,7 +176,7 @@ footer {
 }
 
 
-.list-book{
+.list-book {
     padding: 40px 50px;
     display: flex;
     justify-content: space-evenly;
@@ -201,6 +199,28 @@ footer {
     word-break: break-all;
 }
 
+.btn-basket {
+    border: 1px solid #666666;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-basket i {
+    padding: 0;
+    align-self: center;
+    margin-right: 3px;
+
+}
+
+.btn-basket:hover {
+    background-color: #b22565;
+    color: #fff;
+    border: none;
+}
+
 .bookAuthor p {
     color: #77b748;
     font-size: 18px;
@@ -210,9 +230,11 @@ footer {
 
 .part1-author {
     height: 300px;
-    background: url("/WEB-INF/images/books.jpg") center no-repeat;
+    background: url("https://picsum.photos/1280/300") center no-repeat;
     background-size: cover;
 }
+
+
 
 @media screen and (min-width: 1049px){
     #bloc_page ul {
@@ -223,7 +245,7 @@ footer {
     }
 
     .part1 {
-        height: 100vh;
+        height: 70vh;
     }
 
 }

@@ -36,5 +36,8 @@
         <action name="auteur" class="actions.AuthorsAction">
             <result name="success">/WEB-INF/jsp/authors.jsp</result>
         </action>
+        <action name="authorDetail" class="actions.AuthorDetail">
+            <result name="success">/WEB-INF/jsp/authorDetail.jsp</result>
+        </action>
     </package>
 </struts>
