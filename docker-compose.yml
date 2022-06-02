@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    ports: 
+      - 3306:3306
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=mydata
+    volumes: 
+      - ./drop.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./create.sql:/docker-entrypoint-initdb.d/2.sql
+  
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+      - UPLOAD_LIMIT=256M
+      - PMA_USER=root
+      - PMA_PASSWORD=root
